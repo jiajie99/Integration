@@ -1,0 +1,16 @@
+
+[TestGoSnaps/case_1 - 1]
+{
+ "created_at": "<Any value>",
+ "id": "<Any value>",
+ "name": "Jacky"
+}
+---
+
+[TestGoSnaps/case_2 - 1]
+{
+ "created_at": "<Any value>",
+ "id": "<Any value>",
+ "name": "Tom"
+}
+---
