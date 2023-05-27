@@ -12,7 +12,7 @@ func TestLo(t *testing.T) {
 	names := lo.Uniq([]string{"Samuel", "John", "Samuel"})
 	assert.Equal(t, names, []string{"Samuel", "John"})
 
-	even := lo.Filter([]int{1, 2, 3, 4}, func(x int, index int) bool {
+	even := lo.Filter([]int{1, 2, 3, 4}, func(x int, _ int) bool {
 		return x%2 == 0
 	})
 	assert.Equal(t, even, []int{2, 4})

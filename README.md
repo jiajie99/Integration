@@ -1,7 +1,9 @@
 # Integration
 🔗 Integrated everything.
-- [gomonkey](gomonkey/README.md)
+- [gomonkey](gomonkey)
 - [miniredis](miniredis)
-- [limiter](limiter/README.md)
-- [lo](lo/README.md)
-- [go-snaps](go-snaps/README.md)
+- [limiter](limiter)
+- [lo](lo)
+- [go-snaps](go-snaps)
+- [validator](validator)
+- [wire](wire)
