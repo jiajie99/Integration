@@ -9,6 +9,7 @@ require (
 	github.com/go-playground/validator/v10 v10.11.1
 	github.com/gofrs/uuid v4.4.0+incompatible
 	github.com/google/wire v0.5.0
+	github.com/jinzhu/copier v0.3.5
 	github.com/redis/go-redis/v9 v9.0.3
 	github.com/samber/lo v1.38.1
 	github.com/stretchr/testify v1.8.2

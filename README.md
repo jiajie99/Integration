@@ -7,3 +7,4 @@
 - [go-snaps](go-snaps)
 - [validator](validator)
 - [wire](wire)
+- [copier](copier)
