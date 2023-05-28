@@ -27,7 +27,7 @@ func (s2 *Struct2) DoubleField3(doubleField3 int) {
 	s2.Field3 = doubleField3 * 2
 }
 
-func TestName(t *testing.T) {
+func TestCopier(t *testing.T) {
 	t.Run("copy from field to field with same name", func(t *testing.T) {
 		struct1 := Struct1{
 			Field1: "field1",
