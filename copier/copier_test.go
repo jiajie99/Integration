@@ -46,7 +46,7 @@ func TestCopier(t *testing.T) {
 		assert.Equal(t, 20, struct2.Field3)
 	})
 
-	t.Run("Copy from field to method with same name", func(t *testing.T) {
+	t.Run("copy from field to method with same name", func(t *testing.T) {
 		struct1 := Struct1{
 			Field2: 10,
 		}
