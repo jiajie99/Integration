@@ -1,5 +1,5 @@
 # Integration
-🔗 Integrated everything.
+🔗 Integrate everything.
 - API
   - [limiter](limiter)
   - [validator](validator)
