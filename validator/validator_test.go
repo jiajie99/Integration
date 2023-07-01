@@ -29,6 +29,10 @@ var case3 = `{
 	]
 }`
 
+var case4 = `{
+	"struct5": {}
+}`
+
 type Struct1 struct {
 	Field1 string  `json:"field1" validate:"required"`
 	Field2 *string `json:"field2" validate:"required"`
@@ -43,14 +47,30 @@ type Struct3 struct {
 	Field1 []Struct1 `json:"field1" validate:"required,dive"`
 }
 
+type Struct4 struct {
+	Struct5 Struct5 `json:"struct5"`
+}
+
+type Struct5 struct {
+	Field1 string `json:"field1" validate:"required"`
+}
+
 func TestRequired(t *testing.T) {
 	validate := validator.New()
-	t.Run("test required", func(t *testing.T) {
+	t.Run("test required - 1", func(t *testing.T) {
 		struct1 := Struct1{}
 		err := json.Unmarshal([]byte(case1), &struct1)
 		assert.NoError(t, err)
 		err = validate.Struct(struct1)
 		assert.NoError(t, err)
+	})
+
+	t.Run("test required - 2", func(t *testing.T) {
+		struct4 := Struct4{}
+		err := json.Unmarshal([]byte(case4), &struct4)
+		assert.NoError(t, err)
+		err = validate.Struct(struct4)
+		assert.Errorf(t, err, "Key: 'Struct4.Struct5.Field1' Error:Field validation for 'Field1' failed on the 'required' tag")
 	})
 
 	t.Run("test required and omitempty", func(t *testing.T) {
